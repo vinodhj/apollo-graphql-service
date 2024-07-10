@@ -1,0 +1,13 @@
+services:
+  dizzy_test:
+    build: .
+    command: bun watch
+    ports:
+      - "5003:5003"
+    develop:
+      watch:
+        - path: ./src
+          target: ./src
+          action: sync
+
+  
